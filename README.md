@@ -6,6 +6,8 @@ Plugin based on @react-three/fiber https://r3f.docs.pmnd.rs/ and @react-spring h
 This is a Grafana plugin that adds the ability to create interactive 3D scenes within a Grafana panel.
 When the panel is first loaded, you will see a 3D cube in the center of the scene. Camera controls are disabled by default. The editor has a **Scene3D** menu where each element of the 3D scene is configured. 
 
+For access to the full version, contact: neket.ezhow@gmail.com
+
 ---
 
 
