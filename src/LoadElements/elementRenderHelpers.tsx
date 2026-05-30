@@ -48,9 +48,9 @@ export function renderClickHandler(el: ElementOptions, replaceVariables: any) {
     if (!el.make_clikable) {return;}
 
     if (el.open_in_current) {
-      window.open(replaceVariables(el.link), "_self");
+      window.open(replaceVariables(el.link), "_self", "noopener,noreferrer");
     } else {
-      window.open(replaceVariables(el.link), "_blank");
+      window.open(replaceVariables(el.link), "_blank", "noopener,noreferrer");
     }
   };
 }
