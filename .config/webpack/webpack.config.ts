@@ -176,6 +176,7 @@ const config = async (env: Env): Promise<Configuration> => {
           { from: '**/*.json', to: '.' },
           { from: '**/*.svg', to: '.', noErrorOnMissing: true },
           { from: '**/*.png', to: '.', noErrorOnMissing: true },
+          { from: '../examples/screenshots/**/*', to: 'examples/screenshots/[name][ext]', noErrorOnMissing: true },
           { from: '**/*.html', to: '.', noErrorOnMissing: true },
           { from: 'img/**/*', to: '.', noErrorOnMissing: true },
           { from: 'libs/**/*', to: '.', noErrorOnMissing: true },

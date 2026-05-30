@@ -19,6 +19,20 @@
       "small": "img/logo.svg",
       "large": "img/logo.svg"
     },
+    "screenshots": [
+      {
+        "name": "Data center example",
+        "path": "examples/screenshots/data-center-example.png"
+      },
+      {
+        "name": "Google datacenter",
+        "path": "examples/screenshots/google-datacenter.png"
+      },
+      {
+        "name": "Network map",
+        "path": "examples/screenshots/network map.png"
+      }
+    ],
     "links": [
       {
         "name": "repository",
