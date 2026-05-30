@@ -1,0 +1,177 @@
+
+import { useTexture } from '@react-three/drei';
+
+import { useMemo } from 'react';
+import {Color, DataTexture, RGBAFormat, ShaderMaterial}  from 'three';
+
+
+
+type GradientStop = {
+  position: number;
+  color: Color;
+};
+
+export const createGradientTexture = (
+  colordata: {x:number,y:number,data:number}[],
+  width: number,
+  height: number,
+
+): DataTexture => {
+  // Вычисляем границы данных
+  console.log("load gradient textures")
+  const xValues = colordata.map(p => p.x);
+  const yValues = colordata.map(p => p.y);
+  const tempValues = colordata.map(p => p.data);
+  
+  const minX = Math.min(...xValues);
+  const maxX = Math.max(...xValues);
+  const minZ = Math.min(...yValues);
+  const maxZ = Math.max(...yValues);
+  const minTemp = Math.min(...tempValues);
+  const maxTemp = Math.max(...tempValues);
+  const tempRange = maxTemp - minTemp;
+
+  // Создаем цветовой градиент (синий -> зеленый -> красный)
+  const gradient: GradientStop[] = [
+    { position: 0.0, color: new Color(0, 0, 1) },    // Синий
+    { position: 0.5, color: new Color(0, 1, 0) },    // Зеленый
+    { position: 1.0, color: new Color(1, 0, 0) }     // Красный
+  ];
+
+  // Создаем буфер для данных текстуры
+  const size = width * height * 4;
+  const textureData = new Uint8Array(size);
+
+  // Функция для получения цвета из градиента
+  const getColor = (value: number): Color => {
+    const normalized = (value - minTemp) / tempRange;
+    
+    for (let i = 0; i < gradient.length - 1; i++) {
+      const curr = gradient[i];
+      const next = gradient[i + 1];
+      
+      if (normalized >= curr.position && normalized <= next.position) {
+        const factor = (normalized - curr.position) / (next.position - curr.position);
+        return curr.color.clone().lerp(next.color, factor);
+      }
+    }
+    
+    return gradient[gradient.length - 1].color.clone();
+  };
+
+  // Функция интерполяции температуры в точке
+  const interpolateTemperature = (x: number, y: number): number => {
+    let totalWeight = 0;
+    let tempSum = 0;
+
+    for (const point of colordata) {
+      const dx = Number(point.x) - x;
+      const dz = Number(point.y) - y;
+      const distanceSq = dx * dx + dz * dz;
+      
+      if (distanceSq < 0.0001) return Number(point.data);
+      
+      const weight = 1 / distanceSq;
+      totalWeight += weight;
+      tempSum += weight * Number(point.data)
+    }
+
+    return tempSum / totalWeight;
+  };
+
+  // Заполняем текстуру данными
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      // Преобразуем координаты текстуры в мировые координаты
+      const worldX = minX + (x / (width - 1)) * (maxX - minX);
+      const worldZ = minZ + (y / (height - 1)) * (maxZ - minZ);
+      
+      // Интерполируем температуру
+      const temperature = interpolateTemperature(worldX, worldZ);
+      const color = getColor(temperature);
+      
+      // Вычисляем индекс в массиве данных
+      const idx = (y * width + x) * 4;
+      
+      // Записываем цвет (RGB) и альфа-канал
+      textureData[idx] = Math.floor(color.r * 255);     // R
+      textureData[idx + 1] = Math.floor(color.g * 255); // G
+      textureData[idx + 2] = Math.floor(color.b * 255); // B
+      textureData[idx + 3] = 255;                      // A
+    }
+  }
+
+  // Создаем текстуру
+  const texture = new DataTexture(
+    textureData,
+    width,
+    height,
+    RGBAFormat
+  );
+  texture.needsUpdate = true;
+  
+  return texture;
+};
+export const GradientOverlayMaterial = ({
+  imageUrl,
+  temperatureData,
+  size = 512,
+  opacity = 0.7,
+  
+}: {
+  imageUrl: string;
+  temperatureData: {x:number,y:number,data:number}[];
+  size?: number;
+  opacity?: number;
+ 
+}) => {
+  const [baseTexture, gradientTexture] = useTexture(
+    [imageUrl],
+    ([texture]) => {
+      // Создаем градиентную текстуру
+      const gradTexture = createGradientTexture(temperatureData, size, size);
+      
+      // Возвращаем обе текстуры: [изображение, градиент]
+      return [texture, gradTexture];
+    }
+  );
+
+  const material = useMemo(() => {
+    // Кастомный шейдерный материал для смешивания
+    return new ShaderMaterial({
+      uniforms: {
+        baseMap: { value: baseTexture },
+        gradientMap: { value: gradientTexture },
+        opacity: { value: opacity }
+      },
+      vertexShader: `
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        uniform sampler2D baseMap;
+        uniform sampler2D gradientMap;
+        uniform float opacity;
+        varying vec2 vUv;
+        
+        void main() {
+          vec4 baseColor = texture2D(baseMap, vUv);
+          vec4 gradientColor = texture2D(gradientMap, vUv);
+          
+          // Мультипликативное смешивание
+          vec3 blended = baseColor.rgb * gradientColor.rgb;
+          
+          // Линейная интерполяция по opacity
+          vec3 result = mix(baseColor.rgb, blended, opacity);
+          
+          gl_FragColor = vec4(result, 1.0);
+        }
+      `
+    });
+  }, [baseTexture, gradientTexture, opacity]);
+
+  return material;
+};

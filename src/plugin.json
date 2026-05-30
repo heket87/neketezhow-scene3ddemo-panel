@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "panel",
+  "name": "Scene3D Panel Plugin",
+  "id": "neketezhow-scene3ddemo-panel",
+  "info": {
+    "keywords": [
+      "panel",
+      "3d",
+      "three.js",
+      "visualization",
+      "interactive"
+    ],
+    "description": "Basic demo version of the Scene3D Grafana panel with core 3D elements and GLTF/GLB model loading.",
+    "author": {
+      "name": "neketezhow"
+    },
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "repository",
+        "url": "https://github.com/heket87/neketezhow-scene3d-panel-demo"
+      },
+      {
+        "name": "license",
+        "url": "https://github.com/heket87/neketezhow-scene3d-panel-demo/blob/main/LICENSE"
+      },
+      {
+        "name": "sponsorship",
+        "url": "https://github.com/sponsors/heket87"
+      }
+    ],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaDependency": ">=9.1.2",
+    "plugins": []
+  }
+}

@@ -1,0 +1,6215 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 4,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "-- Mixed --"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red"
+              },
+              {
+                "color": "green",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byRegexp",
+              "options": "/link_status/"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "index": 0,
+                        "text": "DOWN"
+                      },
+                      "1": {
+                        "index": 1,
+                        "text": "UP"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 24,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "add_common_gradient": true,
+        "add_debug": true,
+        "add_pivot_controls": false,
+        "axeshelper": {
+          "marginx": "0",
+          "marginy": "0",
+          "points_size": "2",
+          "position": "top-right",
+          "size": "2"
+        },
+        "backgroundcolor": "",
+        "camera_reset_button_position": "bottom-right",
+        "cameras": [
+          {
+            "aspect": "0",
+            "bottom": "1",
+            "cameraL": "0",
+            "cameraR": "0",
+            "camera_reset_button_position": "bottom-right",
+            "camera_reset_button_size": "36",
+            "cameradistance": "100",
+            "camerafov": "60",
+            "cameranear": "0.1",
+            "cameraposx": "0",
+            "cameraposy": "12",
+            "cameraposz": "18",
+            "enable_light": false,
+            "enablecontrols": true,
+            "eyeSep": "0",
+            "fov": "60",
+            "id": "perspective-camera",
+            "left": "1",
+            "lights": [
+              {
+                "add_light_helper": false,
+                "angle": "60",
+                "castShadow": false,
+                "color": "#FFFFFF",
+                "decay": "0",
+                "directionx": "0",
+                "directiony": "0",
+                "directionz": "0",
+                "distance": "0.01",
+                "groundColor": "#000000",
+                "height": "1",
+                "intensity": "0.9",
+                "light_helper_color": "#FF0000",
+                "light_helper_size": "1",
+                "name": "Light",
+                "penumbra": "0",
+                "positionx": "0",
+                "positiony": "1",
+                "positionz": "1",
+                "radius": "1",
+                "sh": "0",
+                "skyColor": "#FFFFFF",
+                "type": "Directional",
+                "width": "1"
+              }
+            ],
+            "look_at_x": "0",
+            "look_at_y": "0",
+            "look_at_z": "0",
+            "name": "camera",
+            "renderTarget": "0",
+            "right": "1",
+            "showresetcamerabutton": false,
+            "top": "1",
+            "type": "PerspectiveCamera"
+          }
+        ],
+        "canvas_adaptive_dpr": false,
+        "canvas_adaptive_dpr_min": 0.5,
+        "canvas_antialias": true,
+        "canvas_power_preference": "high-performance",
+        "controlsize": "14",
+        "dpr_idle": 1.5,
+        "dpr_moving": 1,
+        "elements": [
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "3.598676323890686",
+            "elementsizeY": "1.962335467338562",
+            "elementsizeZ": "7.476009726524353",
+            "elementurl": "http://192.168.43.132:3000/public/CoreSwitch.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsxahx6-dgd6-ah3t-em",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Switch_Core",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "-90",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "textpositionx": "0",
+              "textpositiony": "5",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "visibility": {
+                "visible": true,
+                "visible_query": "static"
+              }
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "useelementsizeXquery": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "10",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "5.745062771613242",
+            "elementsizeY": "4.140232341122832",
+            "elementsizeZ": "2.979267965125608",
+            "elementurl": "http://192.168.43.132:3000/public/Cloud.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsy7ncz-vrqm-obz6-25e",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "cloud1",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "-8",
+            "elementaxisy": "0",
+            "elementaxisz": "6",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "2.598676323890686",
+            "elementsizeY": "2.962335467338562",
+            "elementsizeZ": "3.476009726524353",
+            "elementurl": "http://192.168.43.132:3000/public/CoreSwitch.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsy9vug-384d-nt0d-lt3",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Database ",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "270",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "-12",
+            "elementaxisy": "0",
+            "elementaxisz": "2",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "2.598676323890686",
+            "elementsizeY": "1.262335467338562",
+            "elementsizeZ": "3.476009726524353",
+            "elementurl": "http://192.168.43.132:3000/public/CoreSwitch.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyci1u-732q-d5sl-2nj",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Edge Router",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "270",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "-9",
+            "elementaxisy": "1",
+            "elementaxisz": "-7",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "4.887930154800415",
+            "elementsizeY": "3.78243225812912",
+            "elementsizeZ": "6.160512685775757",
+            "elementurl": "http://192.168.43.132:3000/public/Router.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyegt8-30t4-rvih-4xv",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Edge Router2",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "270",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "-12",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "5.745062771613242",
+            "elementsizeY": "4.140232341122832",
+            "elementsizeZ": "2.979267965125608",
+            "elementurl": "http://192.168.43.132:3000/public/Cloud.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyfkuo-3gv1-30r9-tat",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "cloud2",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "12",
+            "elementaxisy": "0",
+            "elementaxisz": "2",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "2.598676323890686",
+            "elementsizeY": "1.262335467338562",
+            "elementsizeZ": "3.476009726524353",
+            "elementurl": "http://192.168.43.132:3000/public/CoreSwitch.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyh87d-f104-viba-tgv",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Access Switch1",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "220",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "useelementsizeXquery": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "12",
+            "elementaxisy": "0",
+            "elementaxisz": "-7",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "2.598676323890686",
+            "elementsizeY": "1.262335467338562",
+            "elementsizeZ": "3.476009726524353",
+            "elementurl": "http://192.168.43.132:3000/public/CoreSwitch.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyid83-qubf-sl1m-2r",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Access Switch2",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "220",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "useelementsizeXquery": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": false,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "colorquery": "",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "8",
+            "elementaxisy": "0",
+            "elementaxisz": "7",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1.3361645936965942",
+            "elementsizeY": "2.5",
+            "elementsizeZ": "6",
+            "elementurl": "http://192.168.43.132:3000/public/Firewall.glb",
+            "enablecenter": false,
+            "enablecolorquery": false,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmsyjeuf-rov1-x0dx-6jm",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "Firewall",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "1",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "-90",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "text": "",
+              "useGlobalTextSettings": true
+            },
+            "traverse": false,
+            "type": "load gltf/glb",
+            "usecoloranimations": false,
+            "useelementanimations": false,
+            "useelementsizeXquery": false,
+            "usegradient": false,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_cloud1_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_cloud1",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmtc1z8p-4ryx-mw2q-ha7",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_cloud1",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_cloud1",
+                "elementId": "tmmsy7ncz-vrqm-obz6-25e",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_cloud_link",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_cloud1_link_status",
+              "text": "Link status {Core_to_cloud1_link_status-series}\nBandWidth {core_to_cloud1-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "use_real_center_for_text": true,
+              "visibility": {
+                "visible_query": "Core_to_cloud1_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              }
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_firewall_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_firewall",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmu9zlh2-67do-7i6f-uh",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_firewall",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_firewall",
+                "elementId": "tmmsyjeuf-rov1-x0dx-6jm",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_firewall_link_line",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_firewall_link_status",
+              "text": "Link status {Core_to_firewall_link_status-series}\nBandWidth {core_to_firewall-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "use_real_center_for_text": true,
+              "visibility": {
+                "visible_query": "Core_to_firewall_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              }
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_database_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_database",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmulzjqd-jrgt-o8sx-8o",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_database",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_database",
+                "elementId": "tmmsy9vug-384d-nt0d-lt3",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_database_link_line",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_database_link_status",
+              "text": "Link status {Core_to_database_link_status-series}\nBandWidth {core_to_database-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "visibility": {
+                "visible_query": "Core_to_database_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              },
+              "use_real_center_for_text": true
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_edge_router_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_edge_router",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmumwokd-wzaw-xtnk-f4",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_edge_router",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_edge_router",
+                "elementId": "tmmsyci1u-732q-d5sl-2nj",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_edgerouter1_link_line",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_edge_router_link_status",
+              "text": "Link status {Core_to_edge_router_link_status-series}\nBandWidth {core_to_edge_router-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "visibility": {
+                "visible_query": "Core_to_edge_router_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              },
+              "use_real_center_for_text": true
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_edge_router2_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_edge_router2",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmuna3iy-xj8t-xs04-1fn",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_edge_router2",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_edge_router2",
+                "elementId": "tmmsyegt8-30t4-rvih-4xv",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": true,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_edgerouter2_link_line",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "data": "core_to_edge_router2",
+                "usegradient": true,
+                "x": "0",
+                "y": "0",
+                "z": "0"
+              },
+              {
+                "data": "core_to_edge_router2",
+                "usegradient": true,
+                "x": "-9",
+                "y": "0",
+                "z": "-7"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_edge_router2_link_status",
+              "text": "Link status {Core_to_edge_router2_link_status-series}\nBandWidth {core_to_edge_router2-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "visibility": {
+                "visible_query": "Core_to_edge_router2_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              },
+              "use_real_center_for_text": true
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_cloud2_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_cloud2",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmuobyqz-nlsf-o6e6-bzg",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_cloud2",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_cloud2",
+                "elementId": "tmmsyfkuo-3gv1-30r9-tat",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_cloud2_link",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_cloud2_link_status",
+              "text": "Link status {Core_to_cloud2_link_status-series}\nBandWidth {core_to_cloud2-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "use_real_center_for_text": true,
+              "visibility": {
+                "visible_query": "Core_to_cloud2_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              }
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#C4162A",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FFA6B0",
+                    "value": "1"
+                  }
+                ],
+                "name": "link_failure",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_access_switch2_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_access_switch2",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmuomtg5-x6r4-o5ax-m5",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_access_switch2",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_access_switch2",
+                "elementId": "tmmsyid83-qubf-sl1m-2r",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_access_switch2_link",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_access_switch2_link_status",
+              "text": "Link status {Core_to_access_switch2_link_status-series}\nBandWidth {core_to_access_switch2-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "use_real_center_for_text": true,
+              "visibility": {
+                "visible_query": "Core_to_access_switch2_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              }
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          },
+          {
+            "addText": true,
+            "addmtl": false,
+            "bevel": {
+              "bevelEnabled": true,
+              "bevelSegments": "0",
+              "bevelSize": "0",
+              "bevelThickness": "0",
+              "beveloffset": "0",
+              "steps": "1"
+            },
+            "castshadows": false,
+            "center": {
+              "x": "0",
+              "y": "0"
+            },
+            "center_grid_color": "#ff0000",
+            "change_visible": false,
+            "color": "#00FF00",
+            "coloranimations": [
+              {
+                "colors": [
+                  {
+                    "color": "#FF00FF",
+                    "value": "0"
+                  },
+                  {
+                    "color": "#FF0000",
+                    "value": "1"
+                  }
+                ],
+                "name": "animation",
+                "period": "1",
+                "queryforperiod": false,
+                "queryforstart": "Core_to_access_switch1_link_status",
+                "start_threshold_op": "<",
+                "usequeryforstart": true,
+                "usespringofanimations": true,
+                "usethresholds": false,
+                "valuetostart": "1"
+              }
+            ],
+            "colorquery": "core_to_access_switch1",
+            "double_side": false,
+            "elementMovementAnimations": [
+              {
+                "name": "animaton",
+                "period": "5",
+                "points3d": [
+                  {
+                    "x": "0",
+                    "y": "1",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "0",
+                    "y": "-0.38",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.59",
+                    "y": "-0.81",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.36",
+                    "y": "-0.12",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.95",
+                    "y": "0.31",
+                    "z": "0"
+                  },
+                  {
+                    "x": "-0.22",
+                    "y": "0.31",
+                    "z": "0"
+                  }
+                ],
+                "queryforperiod": false,
+                "return_to_begin": true,
+                "usethresholds": false
+              }
+            ],
+            "elementaxisx": "0",
+            "elementaxisy": "0",
+            "elementaxisz": "0",
+            "elementownanimations": [
+              {
+                "type": "test"
+              }
+            ],
+            "elementownanimationsoptions": [],
+            "elementsizeX": "1",
+            "elementsizeY": "1",
+            "elementsizeZ": "1",
+            "elementurl": "https://example.com/model.glb",
+            "enablecenter": false,
+            "enablecolorquery": true,
+            "extrudex": false,
+            "extrudey": true,
+            "extrudez": false,
+            "font": "Arial",
+            "font_aligh": "center",
+            "fontsize": "20",
+            "gradientcolor": {
+              "gradientsaturation": "0",
+              "gradinetlightnes": "0",
+              "highvalueforgradient": "0",
+              "highvaluegradientcolor": {
+                "h": 200,
+                "l": 200,
+                "s": 200
+              },
+              "lowvalueforgradient": "0",
+              "lowvaluegradientcolor": {
+                "h": 100,
+                "l": 100,
+                "s": 100
+              }
+            },
+            "group_subs": [],
+            "helpwindow": false,
+            "hover": true,
+            "hovercolor": "#00FF00",
+            "id": "tmmuoz1h5-s8se-fsl2-sf",
+            "keybind": "l",
+            "letterSpacing": "1",
+            "line3d_connected_elements": [
+              {
+                "data": "core_to_access_switch1",
+                "elementId": "tmmsxahx6-dgd6-ah3t-em",
+                "usegradient": true
+              },
+              {
+                "data": "core_to_access_switch1",
+                "elementId": "tmmsyh87d-f104-viba-tgv",
+                "usegradient": true
+              }
+            ],
+            "line3d_set_points_manually": false,
+            "lineHeight": "1",
+            "link": "https://google.com",
+            "make_clikable": false,
+            "mtlpath": "https://example.com/pathtomtl.mtl",
+            "name": "switch_to_access_switch1_link",
+            "okranimations": [
+              {
+                "centerofrotationx": "0",
+                "centerofrotationy": "0",
+                "centerofrotationz": "0",
+                "degreesxperanimationperiod": "10",
+                "degreesyperanimationperiod": "0",
+                "degreeszperanimationperiod": "0",
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "radiusofrotation": "1",
+                "rotate_clock": true,
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "opacity": "0.75",
+            "open_in_current": false,
+            "points": [
+              {
+                "x": "0",
+                "y": "1"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "0",
+                "y": "-0.38"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31"
+              }
+            ],
+            "points3d": [
+              {
+                "x": "0",
+                "y": "1",
+                "z": "0"
+              },
+              {
+                "x": "0.22",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "0",
+                "y": "-0.38",
+                "z": "0"
+              },
+              {
+                "x": "-0.59",
+                "y": "-0.81",
+                "z": "0"
+              },
+              {
+                "x": "-0.36",
+                "y": "-0.12",
+                "z": "0"
+              },
+              {
+                "x": "-0.95",
+                "y": "0.31",
+                "z": "0"
+              },
+              {
+                "x": "-0.22",
+                "y": "0.31",
+                "z": "0"
+              }
+            ],
+            "radiuis": "1",
+            "receiveshadows": false,
+            "rotationanimations": [
+              {
+                "degreesxperanimationperiod": "10",
+                "degreesxquery": "",
+                "degreesxusequery": false,
+                "degreesyperanimationperiod": "0",
+                "degreesyquery": "",
+                "degreesyusequery": false,
+                "degreeszperanimationperiod": "0",
+                "degreeszquery": "",
+                "degreeszusequery": false,
+                "name": "animation",
+                "period": "0.5",
+                "queryforperiod": false,
+                "queryforstart": "",
+                "rotationx": "10",
+                "rotationy": "0",
+                "rotationz": "0",
+                "springrotatex": false,
+                "springrotatey": true,
+                "springrotatez": false,
+                "usequeryforstart": false,
+                "usespringofanimations": false,
+                "usethresholds": false,
+                "valuetostart": "0"
+              }
+            ],
+            "rotationx": "0",
+            "rotationy": "0",
+            "rotationz": "0",
+            "segmentsheight": "2",
+            "segmentswidth": "2",
+            "smooth": "0",
+            "subelements": [],
+            "textsettings": {
+              "backtextcolor_enablequery": true,
+              "backtextcolorquery": "Core_to_access_switch1_link_status",
+              "text": "Link status {Core_to_access_switch1_link_status-series}\nBandWidth {core_to_access_switch1-series:2f} MB/s",
+              "textpositionx": "0",
+              "textpositiony": "6",
+              "textpositionz": "0",
+              "useGlobalTextSettings": true,
+              "use_real_center_for_text": true,
+              "visibility": {
+                "visible_query": "Core_to_access_switch1_link_status",
+                "visible_threshold_op": ">=",
+                "visible_threshold_value": "1"
+              }
+            },
+            "traverse": false,
+            "type": "Line3D",
+            "usecoloranimations": true,
+            "useelementanimations": false,
+            "usegradient": true,
+            "useokranimations": false,
+            "useowngradient": false,
+            "userotationanimations": false,
+            "value": "0"
+          }
+        ],
+        "enablecontrols": true,
+        "globaltext": {
+          "backtextcolor": "transparent",
+          "bordersfortextcolor": "#ffffff",
+          "bordersfortextwidth": "0",
+          "leader_line": true,
+          "show_if_condition_match": true,
+          "textcolor": "#ffffff",
+          "textmaxwidth": "200",
+          "textsize": "14",
+          "textstatic": false,
+          "use_real_center_for_text": true
+        },
+        "gradientcolor": {
+          "gradienttype": "IDW",
+          "highvalueforgradient": "70",
+          "highvaluegradientcolor": {
+            "h": 2,
+            "l": 50,
+            "s": 100
+          },
+          "legend_height": "20",
+          "legend_steps": "5",
+          "legend_title": "Bandwidth MB/s",
+          "legend_width": "220",
+          "lowvalueforgradient": "0",
+          "lowvaluegradientcolor": {
+            "h": 238,
+            "l": 50,
+            "s": 100
+          },
+          "marginx": "0",
+          "marginy": "0",
+          "points_size": "2",
+          "position": "top-right",
+          "show_legend": true,
+          "size": "2"
+        },
+        "helpwindow_position": "top-right",
+        "lights": [
+          {
+            "add_light_helper": false,
+            "angle": "60",
+            "castShadow": false,
+            "color": "#FFFFFF",
+            "decay": "0",
+            "directionx": "0",
+            "directiony": "0",
+            "directionz": "0",
+            "distance": "0.01",
+            "groundColor": "#000000",
+            "height": "1",
+            "intensity": "0.9",
+            "light_helper_color": "#FF0000",
+            "light_helper_size": "1",
+            "name": "Dir Light",
+            "penumbra": "0",
+            "positionx": "0",
+            "positiony": "1",
+            "positionz": "1",
+            "radius": "1",
+            "sh": "0",
+            "skyColor": "#FFFFFF",
+            "type": "Directional",
+            "width": "1"
+          },
+          {
+            "add_light_helper": false,
+            "angle": "60",
+            "castShadow": false,
+            "color": "#FFFFFF",
+            "decay": "0",
+            "directionx": "0",
+            "directiony": "0",
+            "directionz": "0",
+            "distance": "0.01",
+            "groundColor": "#000000",
+            "height": "1",
+            "intensity": "0.8",
+            "light_helper_color": "#FF0000",
+            "light_helper_size": "1",
+            "name": "Ambient Light",
+            "penumbra": "0",
+            "positionx": "0",
+            "positiony": "1",
+            "positionz": "1",
+            "radius": "1",
+            "sh": "0",
+            "skyColor": "#FFFFFF",
+            "type": "Directional",
+            "width": "1"
+          }
+        ],
+        "links": [
+          {
+            "link": "https://google.com",
+            "name": "Link",
+            "open_in_current": false
+          }
+        ],
+        "links_bgcolor": "#00000008",
+        "links_bordercolor": "#ffffff00",
+        "links_borderwidth": "0.1",
+        "links_color": "#ccccdc",
+        "links_position": "bottom-right",
+        "links_size": "small",
+        "showresetcamerabutton": true,
+        "use_dynamic_dpr": false
+      },
+      "pluginVersion": "1.0.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "max": 65,
+          "min": 60,
+          "refId": "core_to_firewall",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_cloud1",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_database",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_edge_router",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_edge_router2",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_cloud2",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_access_switch1",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "max": 65,
+          "min": 5,
+          "refId": "core_to_access_switch2",
+          "scenarioId": "random_walk"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "pulseWave": {
+            "offCount": 2,
+            "offValue": 0,
+            "onCount": 2,
+            "onValue": 1,
+            "timeStep": 5
+          },
+          "refId": "Core_to_firewall_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 1,
+            "offValue": 0,
+            "onCount": 3,
+            "onValue": 1,
+            "timeStep": 5
+          },
+          "refId": "Core_to_cloud1_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 5,
+            "offValue": 0,
+            "onCount": 1,
+            "onValue": 1,
+            "timeStep": 4
+          },
+          "refId": "Core_to_database_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 3,
+            "offValue": 0,
+            "onCount": 9,
+            "onValue": 1,
+            "timeStep": 7
+          },
+          "refId": "Core_to_edge_router_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 2,
+            "offValue": 0,
+            "onCount": 5,
+            "onValue": 1,
+            "timeStep": 3
+          },
+          "refId": "Core_to_edge_router2_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 8,
+            "offValue": 0,
+            "onCount": 4,
+            "onValue": 1,
+            "timeStep": 2
+          },
+          "refId": "Core_to_cloud2_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 3,
+            "offValue": 0,
+            "onCount": 8,
+            "onValue": 1,
+            "timeStep": 2
+          },
+          "refId": "Core_to_access_switch1_link_status",
+          "scenarioId": "predictable_pulse"
+        },
+        {
+          "alias": "",
+          "datasource": {
+            "type": "grafana-testdata-datasource",
+            "uid": "bfnmjr2yguuwwa"
+          },
+          "hide": false,
+          "pulseWave": {
+            "offCount": 3,
+            "offValue": 0,
+            "onCount": 8,
+            "onValue": 1,
+            "timeStep": 2
+          },
+          "refId": "Core_to_access_switch2_link_status",
+          "scenarioId": "predictable_pulse"
+        }
+      ],
+      "title": "Scene3D network topology",
+      "transparent": true,
+      "type": "neketezhow-scene3ddemo-panel"
+    }
+  ],
+  "preload": false,
+  "refresh": "5s",
+  "schemaVersion": 41,
+  "tags": [
+    "scene3d"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Scene3D Network Dashboard - Lines Text No Groups",
+  "uid": "scene3d-network-line-text-no-groups",
+  "version": 4
+}

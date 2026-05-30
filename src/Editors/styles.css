@@ -1,0 +1,11 @@
+.small .react-colorful {
+  width: 100%;
+  height: 40px;
+}
+.small .react-colorful__hue {
+  height: 100%;
+}
+.small .react-colorful__saturation {
+  display: inline;
+}
+
